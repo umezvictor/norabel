@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/jquery.easy-autocomplete.min.js"></script> 
+
+<!-- CSS file -->
+<link rel="stylesheet" href="css/easy-autocomplete.min.css">
+<script>
+var options = {
+
+  url: "countries.json",
+
+  getValue: "name",
+
+  list: {	
+    match: {
+      enabled: true
+    }
+  },
+
+  theme: "square"
+};
+
+$("#people").easyAutocomplete(options);
+</head>     
+
+<body>
+
+<h2>Autocomplete</h2>
+
+<p>Start typing:</p>
+
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete" style="width:300px;">
+    <input id="people" type="text" name="myCountry" placeholder="Country">
+  </div>
+  <input type="submit">
+</form>
+
+ <script src="js/jquery-3.3.1.min.js"></script>
+</body>
+</html>
